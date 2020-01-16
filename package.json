@@ -3,23 +3,57 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^1.2.26",
+    "@fortawesome/free-solid-svg-icons": "^5.12.0",
+    "@fortawesome/react-fontawesome": "^0.1.8",
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.3.2",
     "@testing-library/user-event": "^7.1.2",
+    "@types/eslint": "^6.1.1",
     "@types/jest": "^24.0.0",
     "@types/node": "^12.0.0",
     "@types/react": "^16.9.0",
     "@types/react-dom": "^16.9.0",
+    "@types/react-redux": "^7.1.5",
+    "@typescript-eslint/eslint-plugin": "^2.3.1",
+    "@typescript-eslint/parser": "^2.3.1",
+    "bootstrap": "^4.4.1",
+    "eslint": "^6.8.0",
+    "eslint-config-prettier": "^6.9.0",
+    "eslint-plugin-jest": "^23.6.0",
+    "eslint-plugin-prettier": "^3.1.2",
+    "eslint-plugin-react": "^7.17.0",
+    "eslint-plugin-react-hooks": "^2.3.0",
+    "husky": "^4.0.7",
+    "node-sass": "^4.13.0",
+    "prettier": "^1.19.1",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
+    "react-redux": "^7.1.3",
     "react-scripts": "3.3.0",
+    "redux": "^4.0.5",
+    "redux-devtools-extension": "^2.13.8",
+    "stylelint": "^13.0.0",
+    "stylelint-config-recommended-scss": "^4.1.0",
+    "stylelint-scss": "^3.13.0",
     "typescript": "~3.7.2"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "lint": "yarn lint:js && yarn lint:scss",
+    "lint:js": "tsc --noEmit && eslint . --ext .js,.ts,.tsx",
+    "lint:scss": "stylelint src/**/*.scss",
+    "lint:fix": "yarn lint:fix:js && yarn lint:fix:scss",
+    "lint:fix:js": "tsc --noEmit && eslint . --ext .js,.ts,.tsx --fix",
+    "lint:fix:scss": "stylelint src/**/*.scss --syntax scss --fix"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "yarn lint"
+    }
   },
   "eslintConfig": {
     "extends": "react-app"

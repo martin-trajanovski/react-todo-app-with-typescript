@@ -1,0 +1,21 @@
+.todo-item {
+  position: relative;
+  padding: 0.75rem 1.25rem;
+  margin-bottom: 0.5rem;
+  border: 1px solid transparent;
+  border-radius: 0.25rem;
+  color: #004085;
+  background-color: #cce5ff;
+  border-color: #b8daff;
+
+  &.completed {
+    color: #155724;
+    background-color: #d4edda;
+    border-color: #c3e6cb;
+    text-decoration: line-through;
+  }
+
+  .todo-item-text {
+    cursor: pointer;
+  }
+}

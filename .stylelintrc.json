@@ -1,0 +1,12 @@
+{
+  "extends": "stylelint-config-recommended-scss",
+  "rules": {
+    "string-quotes": "single",
+    "rule-empty-line-before": "always",
+    "declaration-block-no-duplicate-properties": true,
+    "block-no-empty": true,
+    "comment-no-empty":  true,
+    "no-duplicate-at-import-rules": true,
+    "no-invalid-double-slash-comments": true
+  }
+}

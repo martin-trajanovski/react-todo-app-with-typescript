@@ -1,0 +1,4 @@
+node_modules
+.next
+
+src/config/serviceWorker.ts
