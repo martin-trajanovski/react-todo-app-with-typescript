@@ -18,4 +18,12 @@
   .todo-item-text {
     cursor: pointer;
   }
+
+  .fa-trash {
+    cursor: pointer;
+
+    &:hover {
+      color: #c82333;
+    }
+  }
 }

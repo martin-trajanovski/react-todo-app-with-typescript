@@ -26,7 +26,7 @@ test('should prevent adding empty todo', () => {
   expect(todos.length).toBe(1);
 });
 
-test('should create todo successfully on form submit', async () => {
+test('should create todo successfully on form submit', () => {
   const {
     container,
     getByPlaceholderText,
@@ -46,7 +46,7 @@ test('should create todo successfully on form submit', async () => {
   expect(todos[todos.length - 1].text).toBe(newTodoText);
 });
 
-test('should create todo successfully on button click', async () => {
+test('should create todo successfully on button click', () => {
   const {
     getByPlaceholderText,
     getByText,
